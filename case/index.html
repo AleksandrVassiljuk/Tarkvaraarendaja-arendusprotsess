@@ -8,72 +8,85 @@
 <body>
     <h1>Mis on Case-vahendid</h1><br/>
     <p>
-     Tarkvaraarenduse elutsükkel koosneb erinevatest etappidest, mille tehtavad tegevused on väga erinevad<br/>
-     kuid igas etapis on siiski arendatava tarkvara jaoks vajalikud tegevused.<br/>Need tegevused<br/>
-     lahendatakse või tehakse ära tööriistadega, mida nimetatakse(inglise keeles CASE-vahenditeks)<br/>
-     tarkvara raaltehnoloogiaks.<br/>
+     Tarkvaraarenduse elutsükkel koosneb erinevatest etappidest, mille tehtavad tegevused on väga erinevad,
+     kuid igas etapis on siiski arendatava tarkvara jaoks vajalikud tegevused. Need tegevused
+     lahendatakse või tehakse ära tööriistadega, mida nimetatakse (inglise keeles CASE-vahenditeks)
+     tarkvaratehnoloogiaks.
      <h2>Case-vahend</h2>
-     CASE on akronüüm inglisekeelsest terminist "computer-aided Software engineering"
+     CASE on akronüüm inglisekeelsest terminist "Computer-Aided Software Engineering".
    </p><br/><br/>
+
    <h1>Kuidas Case-Vahendid kasutatakse</h1>
    <p>
-    CASE-vahend on kasutusel erinevates etappides ja lubab ära teha arendajal tegevusi nagu Nõuete analüüs,<br/>
-    erinevate protsesside voolu kujundamine, ajakava seadmine, dokumentatsiooni genereerimine, versiooni<br/>
-    haldus(olgu siis kas dokumentatsioonile endale, või arendatavale tarkvarale), arendustöö enda teostamine<br/>
-    arendusmeeskonna ja arendustöö oma organiseerimine, prototüübi genereerimine jpm.<br/>
-    Selle eesmärgil kategoriseeritaksegi Case-vahendid kahte peamisesse kategooriasse.<br/>
+    CASE-vahendid on kasutusel erinevates tarkvaraarenduse etappides ja lubavad arendajal teha tegevusi
+    nagu nõuete analüüs, protsesside modelleerimine, ajakava koostamine, dokumentatsiooni genereerimine,
+    versioonihaldus, arendamine, meeskonnatöö korraldamine, prototüüpide loomine jpm.  
+    Selle jaoks jagatakse CASE-vahendid kahte põhirühma:
     <ul>
-       <li><a href="uppercase.html">Upper-CASE-vahendid</li>
-       <li><a href="lowecase.html">Lower-CASE-vahendid</li>
-     </ul><br/>
-     CASE-vahendid lubavad teha ära, kas mingi ühe tegevuse, või otsast-otseni arendustööd. Enamus CASE-vahendid<br/>
-     intergeerib endas ka mitme erineva etapi, või mõlema taseme tööriistu.
-     </p><br/><br/>
-     <h1>Näide, Kuidas arendusmudeli prototüüpimise mudeli, CASE-vahendid rakendada saaks, ning nende tööriistade lühikirjeldus</h1>
-     <p>
-        <h2>Arendusmudel: prototüüpimine</h2>
-        Arendusmudel prototüüpimine koosneb järgmistest sammudest:
-        <table>
-         <thead>
-         <tr>
-          <th>Arendusmudeli samm</th>
-          <th>Sammus tehtavad tööd</th>
-          <th>Vastav CASE-vahend </th>
-          <th>Case vahendi kirjeldus</th>
-         </tr>
-          </thead>
-        <tbody>
+       <li><a href="uppercase.html">Upper-CASE vahendid</a></li>
+       <li><a href="lowecase.html">Lower-CASE vahendid</a></li>
+    </ul>
+    CASE-vahendid võivad toetada ühte konkreetset tegevust või katta kogu arendustsükli.
+   </p><br/><br/>
+
+   <h1>Näide: kuidas CASE-vahendeid kasutatakse prototüüpimise arendusmudelis</h1>
+   <h2>Arendusmudel: prototüüpimine</h2>
+   <p>Prototüüpimise mudel koosneb järgmistes sammudest:</p>
+   <table>
+      <thead>
         <tr>
-           <td> </td>
-
-
-
-           https://eopearhiiv.edu.ee/e-kursused/eucip/arendus/1224_prototpimine.html
-
-
-
-
-
-
-
-
-
-
-
+          <th>Arendusmudeli samm</th>
+          <th>Mida tehakse</th>
+          <th>CASE-vahend</th>
+          <th>Mida vahend teeb</th>
         </tr>
-            <td>Sammu nimi</td>
-            <td>
-             <ul>
-                <li>tehtav töö</li>
-               </ul>
-            </td>
-           <td>Casevahendi nimi ja logo</td>
-           <td>Case-vahendi lühike kirjeldus</td>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Nõuete kogumine</td>
+          <td>
+            Kogutakse info selle kohta, mida süsteem peab tegema ja mida kasutajad soovivad.
+          </td>
+          <td>Enterprise Architect, IBM DOORS</td>
+          <td>
+            Aitab kirja panna nõuded, koostada kasutusjuhte ja hoida infot korras.
+          </td>
         </tr>
-        </tbody>
-        </table>
-     </p>
-
+        <tr>
+          <td>Kiire kavandamine</td>
+          <td>
+            Luua esialgne kujundus: ekraanid, vormid ja põhivoog.  
+            Eesmärk on näidata kliendile esimest versiooni.
+          </td>
+          <td>Figma, Balsamiq, Axure</td>
+          <td>
+            Tööriistad kiirete jooniste ja interaktiivsete prototüüpide loomiseks.
+          </td>
+        </tr>
+        <tr>
+          <td>Iteratiivne täiustamine</td>
+          <td>
+            Kogutakse tagasisidet ja tehakse prototüüpi paremaks mitmes etapis.
+          </td>
+          <td>Jira, Trello, Git</td>
+          <td>
+            Jira/Trello aitavad hallata ülesandeid ja tagasisidet.  
+            Git hoiab versioone ja muudatusi meeskonnatöös.
+          </td>
+        </tr>
+        <tr>
+          <td>Prototüübi lõpetamine</td>
+          <td>
+            Otsustatakse, kas prototüüp visatakse ära või tehakse sellest päris süsteem.
+            Seejärel luuakse lõplik süsteemi plaan.
+          </td>
+          <td>Visual Paradigm, Enterprise Architect</td>
+          <td>
+            Vahendid, millega joonistatakse süsteemi struktuur, klassid ja töövood.
+          </td>
+        </tr>
+      </tbody>
+   </table>
 
 </body>
 </html>

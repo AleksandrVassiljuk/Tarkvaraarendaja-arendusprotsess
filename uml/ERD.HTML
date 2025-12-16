@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erd</title>
+</head>
+<body>
+ <h1>ERD diagrammid (Entity–Relationship Diagram)</h1><br/>
+
+<h2>Mis on ERD diagrammid</h2><br/>
+<p>
+  ERD diagramm kirjeldab andmebaasi struktuuri: millised olemitabelid (nt Kasutaja, Tellimus)
+  süsteemis on, millised väljad neil on ja kuidas tabelid omavahel seotud on. ERD aitab
+  andmemudelit läbi mõelda enne andmebaasi (SQL tabelite) loomist.
+</p>
+
+<h2>Kus ERD diagramme kasutatakse</h2><br/>
+<p>
+  ERD diagramme kasutatakse relatsiooniliste andmebaaside kavandamisel, infosüsteemide analüüsis
+  ja disainis, enne SQL tabelite loomist ning dokumentatsioonis (nt koolitöödes ja projektides).
+</p>
+
+<h2>Ühenduselemendid ja otsade tähendused</h2><br/>
+<p>
+  Ühendused (seosed) näitavad, kuidas kaks olemit on seotud. Otsade tähendused on tavaliselt
+  kardinaalsusena: 1 : 1 (üks-ühele), 1 : N (üks-mitmele) ja N : M (mitu-mitmele).
+</p>
+
+<p>
+  1 : 1 (üks-ühele) – üks kirje ühes tabelis on seotud täpselt ühe kirjega teises tabelis.
+</p>
+<p>
+  1 : N (üks-mitmele) – üks kirje esimeses tabelis on seotud mitme kirjega teises tabelis.
+  Foreign Key asub tavaliselt „mitme“ poole tabelis.
+</p>
+<p>
+  N : M (mitu-mitmele) – mitu kirjet ühes tabelis on seotud mitme kirjega teises tabelis;
+  see lahendatakse vahetabeliga.
+</p>
+
+<h2>Mis olemitabelis peab olema ja olla saab</h2><br/>
+<p>
+  Olemitabel (Entity) esindab ühte tabelit andmebaasis. Olemitabelis peab olema tabeli nimi,
+  väljad (atribuutid) ja vähemalt üks Primary Key (unikaalne identifikaator). Olemitabelis
+  võivad olla tavalised väljad, Foreign Key väljad teiste tabelite viitamiseks ning teised
+  unikaalsed väljad (Key).
+</p>
+
+<h2>Võtmed: Primary Key, Foreign Key, Composite Key ja Key</h2><br/>
+
+<p>
+  Primary Key (PK) on tabeli unikaalne tunnus, mis identifitseerib kirje üheselt.
+  See ei tohi korduda ega olla tühi (NULL).
+</p>
+
+<p>
+  Foreign Key (FK) on väli, mis viitab teise tabeli Primary Key-le. FK loob seose tabelite vahel
+  ja tagab, et viidatav kirje eksisteerib.
+</p>
+
+<p>
+  Composite Key (liitvõti) koosneb mitmest väljast, mis koos moodustavad unikaalse võtme.
+  Seda kasutatakse sageli vahetabelites.
+</p>
+
+<p>
+  Key (tavaline/alternatiivne võti) on väli, mis on samuti unikaalne ja võiks olla Primary Key,
+  kuid pole valitud peamiseks võtmeksi (nt email).
+</p>
+
+<h2>Kuidas võtmeid koos olemitabelitega kasutatakse</h2><br/>
+<p>
+  Igal olemitabelil on Primary Key. Kui üks tabel peab viitama teisele, lisatakse viitavasse
+  tabelisse Foreign Key. Mitu-mitmele seosed tehakse vahetabeliga, kus on kaks Foreign Key-d
+  ning tihti Composite Key nendest väljadest.
+</p>  
+ <h2>Viited</h2>
+ <p>
+    <a href="https://www.lucidchart.com/pages/er-diagrams">
+    Lucidchart – ER diagrammid
+</a>
+
+<a href="https://www.visual-paradigm.com/guide/data-modeling/what-is-entity-relationship-diagram/">
+    Visual Paradigm – ERD selgitused
+</a>
+
+<a href="https://www.geeksforgeeks.org/entity-relationship-diagram-er-diagram/">
+    GeeksforGeeks – ER diagrammid
+</a>
+
+<a href="https://www.lucidchart.com/pages/er-diagram-symbols-and-meaning">
+    Lucidchart – ER diagrammi sümbolid ja tähendused
+</a>
+
+<a href="https://www.geeksforgeeks.org/primary-key-in-dbms/">
+    GeeksforGeeks – Primary Key
+</a>
+
+<a href="https://www.geeksforgeeks.org/foreign-key-in-dbms/">
+    GeeksforGeeks – Foreign Key
+</a>
+
+<a href="https://www.geeksforgeeks.org/composite-key-in-dbms/">
+    GeeksforGeeks – Composite Key
+</a>
+
+<a href="https://www.w3schools.com/sql/sql_primarykey.asp">
+    W3Schools – SQL Primary Key
+</a>
+
+<a href="https://www.w3schools.com/sql/sql_foreignkey.asp">
+    W3Schools – SQL Foreign Key
+</a>
+<h2>Joonis skeemide kohta</h2><br/>
+ </p>
+ h2>Joonis skeemide kohta</h2><br/>
+ <p>
+  <img src="/pildid/erd.png"/>  
+ </p>
+</body>
+</html>

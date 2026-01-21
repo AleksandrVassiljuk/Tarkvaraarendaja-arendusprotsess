@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyEpicBTCCalc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f7caaec8306c9e2475d83f735e4e6cf7e6291d3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+135492601f33ba75491e444fe02432e0b6039e19")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyEpicBTCCalc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyEpicBTCCalc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

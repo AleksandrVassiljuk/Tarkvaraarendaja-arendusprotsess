@@ -1,50 +1,303 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=!, initial-scale=1.0">
-    <title>Minu Tarkvara Arendusprotsessi Ainemapp</title>
-</head>
-<body>
- <h1>Tarkvara Arendusprotsessi tunni raames koostatud Ainemapp</h1>   
- <br/>
- <p>
-  Tarkvara Arendusprotsessi aines tehtud ainemaoo kus on selle aine ja kõikide teiste ainete ülesanded ja muud saavutused kuvatud
-</p>
-<h2>Tarkvaa Arendusprotsess</h2>
-<a href="./index.html">üldiselt - mis see on.</a>
-<a href="CASE/index.html">CASE-vahend </a>
-<a href="uml/index.html">Unified Modeling Language</a>
-<a href="Arenduse elutsüklid/Agile.html">Agile</a>
-<a href="Arenduse elutsüklid/Devops.html">DevOps</a>
-<a href="Arenduse elutsüklid/ExtremeProgramming.html">Extreme Programming</a>
-<a href="Arenduse elutsüklid/V-shape.html">V-shape</a>
-<br>
-<h3>Praktiline rakendus</h3>
-<a href="./BTC/index.html">Bitcoin Calculator</a>
-<a href="./PNC/index.html">Tooted ja Kategooriad</a>
-<br>
---------------------------------------------------------------
-<h2>Kes ma olen:</h2>
-<table>
-<tr>
- <td>Minu nimi</td>  
- <td>Mida ma teen:</td> 
-<td>Kust ma tulen</td>
-<ts>pilt</ts>
-</tr>
-<tr>
-<td>Aleksandr Vassiljuk</td>
-<td>Olen kohalik koodiahv</td>
-<td>Tulen Tapalt</td>
-<td> <img height="120"src=./pildid/download.jpg  > </td>
-</tr>
-<tr> 
-     <td>colspan="4">
-    <a href="https://github.com/AleksandrVassiljuk">Minu githubi link</a>
-</td>
-</tr>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minu Tarkvara Arendusprotsessi Ainemapp</title>
+  <meta name="description" content="Tarkvara Arendusprotsessi ainemapp – ülesanded, lingid ja tutvustus." />
 
-</table>
-</body>
-</html>
+  <style>
+    :root{
+      --bg:#0b1020;
+      --panel:rgba(255,255,255,.06);
+      --panel2:rgba(255,255,255,.09);
+      --text:rgba(255,255,255,.92);
+      --muted:rgba(255,255,255,.72);
+      --border:rgba(255,255,255,.14);
+      --accent:#7c5cff;
+      --accent2:#36d1dc;
+      --radius:18px;
+      --shadow:0 18px 55px rgba(0,0,0,.35);
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1100px 550px at 18% 8%, rgba(124,92,255,.35), transparent 60%),
+        radial-gradient(900px 520px at 82% 16%, rgba(54,209,220,.25), transparent 55%),
+        radial-gradient(900px 700px at 50% 100%, rgba(255,255,255,.06), transparent 60%),
+        var(--bg);
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    a:focus{outline:2px solid var(--accent2);outline-offset:3px;border-radius:12px}
+
+    .wrap{max-width:var(--max);margin:0 auto;padding:26px 16px 56px}
+
+    header{
+      border:1px solid var(--border);
+      background:linear-gradient(135deg, rgba(124,92,255,.18), rgba(54,209,220,.10));
+      border-radius:calc(var(--radius) + 6px);
+      box-shadow:var(--shadow);
+      padding:18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      flex-wrap:wrap;
+      backdrop-filter:blur(10px);
+      position:sticky;
+      top:14px;
+      z-index:10;
+    }
+    .brand{display:flex;align-items:center;gap:12px;min-width:280px}
+    .logo{
+      width:44px;height:44px;border-radius:14px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      box-shadow:0 12px 30px rgba(124,92,255,.25);
+      flex:0 0 auto;
+    }
+    h1{margin:0;font-size:clamp(18px,2.2vw,22px)}
+    .subtitle{margin:0;color:var(--muted);font-size:14px}
+
+    nav{display:flex;gap:10px;flex-wrap:wrap}
+    .pill{
+      padding:10px 12px;border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.05);
+      transition:transform .15s ease, background .15s ease, border-color .15s ease;
+      font-size:14px;
+    }
+    .pill:hover{transform:translateY(-1px);background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.20)}
+
+    main{margin-top:22px;display:grid;gap:16px}
+
+    .hero{
+      padding:22px;
+      border-radius:var(--radius);
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+    }
+    .hero h2{margin:0 0 8px;font-size:clamp(22px,3vw,30px);line-height:1.2}
+    .hero p{margin:0;color:var(--muted);max-width:75ch}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:14px;
+    }
+    .card{
+      grid-column:span 6;
+      padding:18px;
+      border-radius:var(--radius);
+      border:1px solid var(--border);
+      background:var(--panel);
+      box-shadow:0 14px 40px rgba(0,0,0,.25);
+      transition:transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+    .card:hover{transform:translateY(-2px);background:var(--panel2);border-color:rgba(255,255,255,.22)}
+    .card h3{margin:0 0 6px;font-size:18px}
+    .card p{margin:0 0 12px;color:var(--muted);font-size:14px}
+
+    .links{display:grid;gap:10px}
+    .link{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      padding:12px 12px;border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.05);
+    }
+    .link span{display:block;color:var(--muted);font-size:13px;margin-top:2px}
+    .arrow{
+      width:34px;height:34px;border-radius:12px;
+      display:grid;place-items:center;
+      background:linear-gradient(135deg, rgba(124,92,255,.35), rgba(54,209,220,.25));
+      border:1px solid rgba(255,255,255,.16);
+      flex:0 0 auto;
+    }
+
+    .profile{
+      grid-column:span 12;
+      display:grid;
+      grid-template-columns:140px 1fr;
+      gap:16px;
+      align-items:start;
+      padding:18px;
+      border-radius:var(--radius);
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+    }
+    .avatar{
+      width:140px;aspect-ratio:1/1;
+      border-radius:20px;
+      border:1px solid var(--border);
+      object-fit:cover;
+      box-shadow:0 18px 50px rgba(0,0,0,.35);
+    }
+    .meta{display:grid;gap:8px;color:var(--muted);font-size:14px}
+    table{width:100%;border-collapse:collapse;margin-top:10px}
+    th,td{padding:10px 8px;border-bottom:1px solid rgba(255,255,255,.10);text-align:left}
+    th{color:rgba(255,255,255,.85);font-weight:600}
+
+    .btnrow{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:10px 12px;border-radius:14px;
+      border:1px solid rgba(255,255,255,.16);
+      background:linear-gradient(135deg, rgba(124,92,255,.28), rgba(54,209,220,.18));
+    }
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px;opacity:.9}
+
+    @media (max-width:860px){
+      header{position:static}
+      .card{grid-column:span 12}
+      .profile{grid-template-columns:1fr}
+      .avatar{width:120px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Minu Tarkvara Arendusprotsessi ainemapp</h1>
+          <p class="subtitle">Kogutud lingid, ülesanded ja praktilised tööd GitHub Pages’is.</p>
+        </div>
+      </div>
+
+      <nav aria-label="Kiirlingid">
+        <a class="pill" href="#aine">Aine</a>
+        <a class="pill" href="#praktiline">Praktiline</a>
+        <a class="pill" href="#mina">Kes ma olen</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="aine">
+        <h2>Tarkvara Arendusprotsessi tunni raames koostatud ainemapp</h2>
+        <p>
+          Tarkvara Arendusprotsessi aines tehtud ainemapp, kus on selle aine (ja seotud teemade) ülesanded ning muud saavutused kuvatud.
+          Allpool on lingid teooriale, arenduse elutsüklitele ning praktilistele töödele.
+        </p>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h3>Tarkvara arendusprotsess</h3>
+          <p>Üldine info, CASE ja UML.</p>
+          <div class="links">
+            <a class="link" href="./index.html">
+              <div>
+                <strong>Üldiselt – mis see on</strong>
+                <span>Ülevaade aine mõistetest</span>
+              </div>
+              <div class="arrow" aria-hidden="true">↗</div>
+            </a>
+
+            <a class="link" href="CASE/index.html">
+              <div>
+                <strong>CASE-vahend</strong>
+                <span>Tööriistad ja protsessid</span>
+              </div>
+              <div class="arrow" aria-hidden="true">↗</div>
+            </a>
+
+            <a class="link" href="uml/index.html">
+              <div>
+                <strong>Unified Modeling Language (UML)</strong>
+                <span>Diagrammid ja modelleerimine</span>
+              </div>
+              <div class="arrow" aria-hidden="true">↗</div>
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Arenduse elutsüklid</h3>
+          <p>Levinud lähenemised: Agile, DevOps, XP, V-mudel.</p>
+          <div class="links">
+            <a class="link" href="Arenduse elutsüklid/Agile.html">
+              <div>
+                <strong>Agile</strong>
+                <span>Paindlik arendus</span>
+              </div>
+              <div class="arrow" aria-hidden="true">↗</div>
+            </a>
+
+            <a class="link" href="Arenduse elutsüklid/Devops.html">
+              <div>
+                <strong>DevOps</strong>
+                <span>Arendus + ops + automatiseerimine</span>
+              </div>
+              <div class="arrow" aria-hidden="true">↗</div>
+            </a>
+
+            <a class="link" href="Arenduse elutsüklid/ExtremeProgramming.html">
+              <div>
+                <strong>Extreme Programming</strong>
+                <span>Praktikad ja kvaliteet</span>
+              </div>
+              <div class="arrow" aria-hidden="true">↗</div>
+            </a>
+
+            <a class="link" href="Arenduse elutsüklid/V-shape.html">
+              <div>
+                <strong>V-shape</strong>
+                <span>V-mudel ja testimine</span>
+              </div>
+              <div class="arrow" aria-hidden="true">↗</div>
+            </a>
+          </div>
+        </article>
+
+        <article class="card" id="praktiline">
+          <h3>Praktiline rakendus</h3>
+          <p>Kursuse käigus tehtud projektid/harjutused.</p>
+          <div class="links">
+            <a class="link" href="./BTC/index.html">
+              <div>
+                <strong>Bitcoin Calculator</strong>
+                <span>Kalkulaatori projekt</span>
+              </div>
+              <div class="arrow" aria-hidden="true">↗</div>
+            </a>
+
+            <a class="link" href="./PNC/index.html">
+              <div>
+                <strong>Tooted ja kategooriad</strong>
+                <span>Product & Category struktuur</span>
+              </div>
+              <div class="arrow" aria-hidden="true">↗</div>
+            </a>
+          </div>
+        </article>
+
+        <section class="profile" id="mina">
+          <img class="avatar" src="./pildid/download.jpg" alt="Aleksandr Vassiljuk profiilipilt" />
+
+          <div>
+            <h3>Kes ma olen</h3>
+
+            <!-- Sinu algse tabeli info (parandatud kujul) -->
+            <table aria-label="Isiklik info">
+              <thead>
+                <tr>
+                  <th>Minu nimi</th>
+                  <th>Mida ma teen</th>
+                  <th>Kust ma tulen</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Aleksandr Vassiljuk</td>
+                  <td>Olen kohalik koodiahv</td>
+                  <td>Tulen Tapalt</td>
+                </tr>
+              </tbody>

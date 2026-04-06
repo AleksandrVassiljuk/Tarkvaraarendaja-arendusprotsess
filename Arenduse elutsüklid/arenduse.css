@@ -1,0 +1,83 @@
+/* arenduse.css */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+h1 {
+    color: #003366;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #0055aa;
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #0077cc;
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+ul {
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #003366;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #cce0ff;
+    color: #003366;
+}
+
+td {
+    background-color: #f2f9ff;
+}
+
+a {
+    color: #0055aa;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+    height: auto;
+}

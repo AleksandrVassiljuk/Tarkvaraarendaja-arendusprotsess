@@ -3,51 +3,80 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background: #0f172a;
     color: white;
+    scroll-behavior: smooth;
 }
 
 /* HERO */
 .hero {
     text-align: center;
-    padding: 70px 20px;
+    padding: 80px 20px;
     background: linear-gradient(135deg, #1a73e8, #0f172a);
 }
 
 .hero h1 {
-    font-size: 2.2em;
+    font-size: 2.4em;
 }
 
 .hero p {
     opacity: 0.8;
 }
 
-/* NAV */
+/* STICKY NAV */
 nav {
-    margin-top: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    margin-top: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+    padding: 12px;
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #334155;
 }
 
+/* NAV LINKS */
 nav a {
     color: white;
     text-decoration: none;
-    padding: 8px 12px;
+    padding: 8px 14px;
     border-radius: 20px;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.08);
     transition: 0.3s;
 }
 
 nav a:hover {
     background: white;
     color: #0f172a;
+    transform: scale(1.05);
 }
 
-/* SECTIONS */
+/* SECTIONS + ANIMATION */
 section {
     padding: 60px 20px;
     max-width: 1100px;
     margin: auto;
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s forwards;
+}
+
+section:nth-child(odd) {
+    animation-delay: 0.1s;
+}
+
+section:nth-child(even) {
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* GRID */
@@ -57,23 +86,42 @@ section {
     gap: 15px;
 }
 
-/* CARDS */
+/* CARDS (GLASS STYLE UPGRADE) */
 .card {
-    background: #1e293b;
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(8px);
     padding: 18px;
-    border-radius: 12px;
+    border-radius: 14px;
     transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.05);
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    background: #273449;
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    border-color: #1a73e8;
 }
 
 .card a {
-    color: #1a73e8;
+    color: #60a5fa;
     text-decoration: none;
     font-weight: bold;
+}
+
+/* BUTTON SYSTEM (uus feature) */
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    background: #1a73e8;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #2563eb;
+    transform: scale(1.05);
 }
 
 /* FOOTER */
@@ -84,9 +132,24 @@ footer {
     border-top: 1px solid #334155;
 }
 
+/* ACTIVE LINK CLASS (kasutamiseks JS-iga) */
+nav a.active {
+    background: white;
+    color: #0f172a;
+}
+
 /* MOBILE */
 @media (max-width: 600px) {
     .hero h1 {
         font-size: 1.6em;
+    }
+
+    nav {
+        gap: 6px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 6px 10px;
     }
 }

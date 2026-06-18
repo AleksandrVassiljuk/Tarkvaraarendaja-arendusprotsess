@@ -7,24 +7,27 @@ body {
     color: #222;
 }
 
+/* MAIN CONTAINER */
 .container {
     max-width: 980px;
     margin: 20px auto;
     padding: 20px;
 }
 
+/* HEADER */
 h1 {
     text-align: center;
     color: #2c3e50;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 p {
     text-align: center;
     color: #555;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
+/* SECTIONS */
 section {
     background: #fff;
     padding: 20px;
@@ -33,6 +36,7 @@ section {
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
+/* HEADINGS */
 h2 {
     color: #2c3e50;
     margin-bottom: 12px;
@@ -43,18 +47,18 @@ h3 {
     margin-bottom: 10px;
 }
 
-/* Listid keskele */
+/* LISTS (FIX: ära keskesta kogu listi) */
 ul {
     list-style: none;
     padding-left: 0;
-    text-align: center;  /* keskele joondus */
 }
 
 li {
     margin: 8px 0;
+    text-align: center;
 }
 
-/* Lingid */
+/* LINKS */
 a {
     text-decoration: none;
     color: #1a73e8;
@@ -65,7 +69,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Tabelid */
+/* TABLE */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -82,19 +86,26 @@ th {
     background-color: #f0f0f0;
 }
 
-/* Pildid */
+/* IMAGE */
 img {
     border-radius: 8px;
     max-width: 100%;
     height: auto;
 }
 
-/* Footer link */
+/* FOOTER */
 .footer-link {
     text-align: center;
     padding-top: 10px;
 }
 
-.clear {
-    clear: both;
+/* MOBILE */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
 }

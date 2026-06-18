@@ -1,46 +1,45 @@
-/* style.css */
-
-/* Üldised sätted */
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    margin: 20px;
-    background-color: #f9f9f9;
-    color: #333;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f6f8;
+    color: #222;
 }
 
-/* Pealkirjad */
+/* PEALKIRJAD */
 h1 {
-    color: #1a73e8;
+    color: #2c3e50;
     text-align: center;
     margin-bottom: 20px;
 }
 
 h2 {
-    color: #1a73e8;
+    color: #2c6cb0;
     margin-top: 30px;
     margin-bottom: 10px;
-    border-bottom: 2px solid #1a73e8;
+    border-bottom: 2px solid #2c6cb0;
     padding-bottom: 5px;
 }
 
 h3 {
-    color: #0b3d91;
+    color: #3a7bd5;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
-/* Tekstid ja märkused */
+/* TEKST */
 p {
     margin-bottom: 15px;
+    color: #444;
 }
 
 p.note {
     font-style: italic;
-    color: #555;
+    color: #666;
 }
 
-/* Loendid */
+/* LISTID */
 ul {
     margin-left: 20px;
     margin-bottom: 15px;
@@ -50,33 +49,38 @@ li {
     margin-bottom: 5px;
 }
 
-/* Tabelid */
-table, th, td {
-    border: 1px solid #1a73e8;
+/* TABEL */
+table {
+    width: 100%;
     border-collapse: collapse;
-    padding: 8px;
+    margin: 15px 0;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
 
-th {
-    background-color: #e1ecff;
+th, td {
+    border: 1px solid #e0e0e0;
+    padding: 10px;
     text-align: left;
 }
 
-td {
-    background-color: #fff;
+th {
+    background-color: #eaf2ff;
 }
 
-/* Pildid ja videod keskele */
+/* PILT + VIDEO */
 img, video {
     display: block;
     margin: 10px auto;
     max-width: 90%;
     height: auto;
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
 }
 
-/* Kood ja failitee */
+/* KOOD */
 code {
     background-color: #eee;
     padding: 2px 5px;
@@ -84,9 +88,9 @@ code {
     border-radius: 3px;
 }
 
-/* Lingid */
+/* LINGID */
 a {
-    color: #1a73e8;
+    color: #2c6cb0;
     text-decoration: none;
 }
 
@@ -94,14 +98,24 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Video elemendi täiendav stiil */
-video {
-    max-width: 100%;
-}
-
-/* Lõikude ja sektsioonide vahe */
+/* SECTIONS */
 section {
     margin-bottom: 30px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ddd;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.6em;
+    }
 }

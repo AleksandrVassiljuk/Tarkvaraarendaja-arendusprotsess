@@ -1,40 +1,43 @@
-/* arenduse.css */
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    margin: 20px;
-    background-color: #ffffff;
-    color: #000000;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f6f8;
+    color: #222;
 }
 
+/* PEALKIRJAD */
 h1 {
-    color: #003366;
+    color: #2c3e50;
     font-size: 2em;
     margin-bottom: 10px;
 }
 
 h2 {
-    color: #0055aa;
+    color: #2c6cb0;
     font-size: 1.5em;
     margin-top: 20px;
     margin-bottom: 10px;
 }
 
 h3 {
-    color: #0077cc;
+    color: #3a7bd5;
     font-size: 1.2em;
     margin-top: 15px;
     margin-bottom: 10px;
 }
 
+/* TEKST */
 p {
     font-size: 1em;
     margin-bottom: 15px;
+    color: #444;
 }
 
+/* LISTID */
 ul {
-    margin-left: 30px;
+    margin-left: 20px;
     margin-bottom: 15px;
 }
 
@@ -42,32 +45,35 @@ ul li {
     margin-bottom: 5px;
 }
 
+/* TABEL */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
-}
-
-table, th, td {
-    border: 1px solid #003366;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
 
 th, td {
+    border: 1px solid #e0e0e0;
     padding: 10px;
     text-align: left;
 }
 
 th {
-    background-color: #cce0ff;
-    color: #003366;
+    background-color: #eaf2ff;
+    color: #2c3e50;
 }
 
 td {
-    background-color: #f2f9ff;
+    background-color: #ffffff;
 }
 
+/* LINGID */
 a {
-    color: #0055aa;
+    color: #2c6cb0;
     text-decoration: none;
 }
 
@@ -75,9 +81,22 @@ a:hover {
     text-decoration: underline;
 }
 
+/* PILT */
 img {
     display: block;
     margin: 0 auto;
     max-width: 90%;
     height: auto;
+    border-radius: 8px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    table {
+        font-size: 14px;
+    }
 }

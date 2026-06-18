@@ -1,16 +1,16 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.7;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background: #0f172a;
+    color: #e2e8f0;
     padding: 20px;
-    background: #f4f6f8;
-    color: #222;
 }
 
 /* PEALKIRJAD */
 h1, h2 {
     text-align: center;
-    color: #2c3e50;
+    color: white;
     margin-bottom: 15px;
 }
 
@@ -21,7 +21,7 @@ h1 {
 
 h2 {
     font-size: 1.5em;
-    margin-top: 15px;
+    color: #60a5fa;
 }
 
 /* TEKST */
@@ -29,7 +29,7 @@ p {
     max-width: 900px;
     margin: 10px auto 20px auto;
     text-align: justify;
-    color: #555;
+    color: #cbd5e1;
 }
 
 /* LISTID */
@@ -43,38 +43,40 @@ li {
     margin: 6px 0;
 }
 
-/* LINGID */
+/* LINKS */
 a {
     text-decoration: none;
-    color: #1a73e8;
+    color: #60a5fa;
     font-weight: 500;
+    transition: 0.2s;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: white;
 }
 
-/* TABEL */
+/* TABLE (MODERN CARD STYLE) */
 table {
     max-width: 900px;
     margin: 20px auto;
     border-collapse: collapse;
     width: 100%;
-    background: white;
+    background: #1e293b;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
 }
 
 th, td {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #334155;
     padding: 10px;
     text-align: left;
+    color: #e2e8f0;
 }
 
 th {
-    background-color: #f0f0f0;
-    color: #2c3e50;
+    background-color: #1a73e8;
+    color: white;
 }
 
 /* nested list tabelis */

@@ -1,53 +1,59 @@
 body {
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background: #f4f6f8;
-    color: #222;
+    background: #0f172a;
+    color: #e2e8f0;
 }
 
 /* MAIN CONTAINER */
 .container {
-    max-width: 980px;
-    margin: 20px auto;
+    max-width: 1100px;
+    margin: auto;
     padding: 20px;
 }
 
 /* HEADER */
 h1 {
     text-align: center;
-    color: #2c3e50;
+    color: white;
+    font-size: 2.2em;
     margin-bottom: 10px;
 }
 
 p {
     text-align: center;
-    color: #555;
+    color: #cbd5e1;
     margin-bottom: 25px;
 }
 
-/* SECTIONS */
+/* SECTIONS (MODERN CARD STYLE) */
 section {
-    background: #fff;
+    background: #1e293b;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+section:hover {
+    transform: translateY(-3px);
 }
 
 /* HEADINGS */
 h2 {
-    color: #2c3e50;
+    color: #60a5fa;
     margin-bottom: 12px;
+    border-left: 4px solid #1a73e8;
+    padding-left: 10px;
 }
 
 h3 {
-    color: #2c3e50;
-    margin-bottom: 10px;
+    color: #93c5fd;
 }
 
-/* LISTS (FIX: ära keskesta kogu listi) */
+/* LISTS */
 ul {
     list-style: none;
     padding-left: 0;
@@ -61,12 +67,13 @@ li {
 /* LINKS */
 a {
     text-decoration: none;
-    color: #1a73e8;
+    color: #60a5fa;
     font-weight: 500;
+    transition: 0.3s;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: white;
 }
 
 /* TABLE */
@@ -74,35 +81,42 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
+    background: #0f172a;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 th, td {
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
+    padding: 12px;
+    border-bottom: 1px solid #334155;
     text-align: left;
 }
 
 th {
-    background-color: #f0f0f0;
+    background: #1a73e8;
+    color: white;
 }
 
 /* IMAGE */
 img {
-    border-radius: 8px;
-    max-width: 100%;
-    height: auto;
+    display: block;
+    margin: 10px auto;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
 /* FOOTER */
 .footer-link {
     text-align: center;
-    padding-top: 10px;
+    margin-top: 20px;
+    color: #94a3b8;
 }
 
 /* MOBILE */
 @media (max-width: 600px) {
-    .container {
-        padding: 10px;
+    h1 {
+        font-size: 1.6em;
     }
 
     section {

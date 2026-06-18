@@ -1,43 +1,45 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f5f9;
     margin: 0;
-    padding: 0;
-    color: #333;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
 }
 
-/* MAIN CONTAINER */
+/* CONTAINER */
 .container {
-    width: 80%;
+    max-width: 1000px;
     margin: 40px auto;
-    background-color: white;
+    background: #1e293b;
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
 }
 
 /* PEALKIRJAD */
 h1 {
-    color: #1e4d8f;
+    color: white;
     text-align: center;
     margin-bottom: 10px;
 }
 
 h2 {
-    color: #2c6cb0;
+    color: #60a5fa;
     margin-top: 25px;
+    border-left: 4px solid #1a73e8;
+    padding-left: 10px;
 }
 
+/* TEKST */
 p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.6;
-    color: #444;
+    color: #cbd5e1;
 }
 
-/* NUPUD (LINKIDEST BUTTON STYLE) */
+/* BUTTON LINKID */
 .link-btn {
     display: inline-block;
-    background-color: #2c6cb0;
+    background-color: #1a73e8;
     color: white;
     text-decoration: none;
     padding: 10px 18px;
@@ -47,18 +49,27 @@ p {
 }
 
 .link-btn:hover {
-    background-color: #173b66;
-    transform: translateY(-2px);
+    background-color: #2563eb;
+    transform: translateY(-3px);
 }
 
-/* üldlingid */
+/* LINKS */
 a {
-    cursor: pointer;
-    color: #2c6cb0;
+    color: #60a5fa;
+    text-decoration: none;
+    transition: 0.2s;
 }
 
 a:hover {
-    text-decoration: underline;
+    color: white;
+}
+
+/* CARD EFFECT (kui tahad sektsioone eraldi) */
+section {
+    margin-top: 20px;
+    padding: 15px;
+    background: #0f172a;
+    border-radius: 10px;
 }
 
 /* MOBILE */
@@ -69,10 +80,10 @@ a:hover {
     }
 
     h1 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     p {
-        font-size: 16px;
+        font-size: 15px;
     }
 }

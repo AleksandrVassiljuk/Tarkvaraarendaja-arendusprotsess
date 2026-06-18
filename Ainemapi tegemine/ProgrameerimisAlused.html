@@ -1,106 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="ainemapp.css">
+  <meta charset="UTF-8">
+  <title>Programmeerimise alused</title>
+  <link rel="stylesheet" href="ainemapp.css">
 </head>
+
 <body>
-<h1>Programmeerimise alused</h1>
+
+<header>
+  <h1>Programmeerimise alused</h1>
+</header>
+
+<section class="box">
+
+<h2>Sissejuhatus</h2>
 
 <p>
-See aine õpetas mulle programmeerimise põhitõdesid. 
-Õppisin, kuidas kirjutada lihtsaid programme Python keeles. 
-Sain aru, kuidas loogika ja kood koos töötavad. 
+Programmeerimine tähendab arvutile juhiste andmist. Nende juhiste abil saab arvuti teha erinevaid ülesandeid.
+Programmid koosnevad koodist, mis kirjutatakse kindlas programmeerimiskeeles. Mina õppisin Python keelt.
+Programmeerimise eesmärk on lahendada probleeme ja automatiseerida tööd.
 </p>
 
-<h2>Teemad</h2>
-
-<h3>IDE ja Python sissejuhatus</h3>
 <p>
-Õppisin, mis on IDE ja kuidas seda kasutada. 
-Tutvusin Python programmeerimiskeelega. 
-Kirjutasin oma esimesed lihtsad programmid. 
+Programmi töö toimub samm-sammult. Arvuti loeb koodi ülevalt alla ja täidab käske järjest.
+Kui koodis on viga, siis programm ei pruugi töötada või annab veateate.
 </p>
 
-<h3>Voodiagramm</h3>
+<pre>
+print("Tere maailm")
+</pre>
+
+</section>
+
+<section class="box">
+
+<h2>Muutujad</h2>
+
 <p>
-Õppisin, kuidas teha voodiagramme. 
-Need aitavad programmi loogikat paremini mõista. 
-Joonistasin hommikuste tegevuste algoritmi. 
+Muutuja on koht, kuhu saab salvestada andmeid. Näiteks saab salvestada nime, vanuse või arvu.
+Pythonis ei pea eraldi ütlema, mis tüüpi muutuja on.
 </p>
 
-<h3>Arvude teisendus</h3>
 <p>
-Õppisin teisendama arve erinevate süsteemide vahel. 
-Näiteks kahend- ja kümnendsüsteem. 
-See arendas minu loogilist mõtlemist. 
+Muutujaid kasutatakse peaaegu igas programmis, sest ilma nendeta ei saa andmeid hoida.
 </p>
 
-<h3>Järjend ja sõne</h3>
+<pre>
+nimi = "Aleksandr"
+vanus = 17
+arv = 10
+
+print(nimi)
+print(vanus)
+print(arv)
+</pre>
+
+</section>
+
+<section class="box">
+
+<h2>Tingimuslaused</h2>
+
 <p>
-Õppisin, mis on järjend ja sõne. 
-Kasutasin neid andmete hoidmiseks programmis. 
-Harjutasin nende kasutamist ülesannetes. 
+Tingimuslaused aitavad programmil otsuseid teha. Näiteks saab kontrollida, kas arv on suurem või väiksem.
 </p>
 
-<h3>Tingimuslaused</h3>
 <p>
-Õppisin kasutama if-lauset. 
-See aitab teha otsuseid programmis. 
-Näiteks kontrollida tingimusi. 
+Kui tingimus on tõene, siis tehakse üks tegevus. Kui ei ole tõene, tehakse teine tegevus.
 </p>
 
-<h3>Tsüklid</h3>
+<pre>
+a = 10
+
+if a > 5:
+    print("Arv on suurem kui 5")
+else:
+    print("Arv on väiksem või võrdne 5")
+</pre>
+
+</section>
+
+<section class="box">
+
+<h2>Tsüklid</h2>
+
 <p>
-Õppisin while ja for tsükleid. 
-Need aitavad korduvaid tegevusi teha. 
-Kasutasin neid erinevates ülesannetes. 
+Tsükleid kasutatakse siis, kui on vaja sama asja mitu korda korrata.
+Näiteks saab printida numbreid või käia läbi listi kõik elemendid.
 </p>
 
-<h3>Funktsioonid</h3>
 <p>
-Õppisin, mis on funktsioon. 
-Funktsioon aitab koodi lihtsamaks teha. 
-Kasutasin funktsioone ülesannetes. 
+Kõige rohkem kasutatakse for-tsüklit ja while-tsüklit.
 </p>
 
-<h3>Matemaatilised avaldised</h3>
+<pre>
+for i in range(5):
+    print(i)
+</pre>
+
+</section>
+
+<section class="box">
+
+<h2>Funktsioonid</h2>
+
 <p>
-Õppisin kasutama matemaatilisi tehteid koodis. 
-Näiteks liitmine, lahutamine ja korrutamine. 
-Lahendasin ülesandeid ja teste. 
+Funktsioon on koodiplokk, mida saab mitu korda kasutada. See aitab vältida korduvat koodi.
 </p>
 
-<h3>Koodistiil</h3>
 <p>
-Õppisin kirjutama korrektset koodi. 
-Hea kood on loetav ja arusaadav. 
-See on oluline programmeerimises. 
+Funktsioonile saab anda ka sisendeid (parameetreid).
 </p>
 
-<h3>Git ja commit</h3>
+<pre>
+def tervitus(nimi):
+    print("Tere " + nimi)
+
+tervitus("Mari")
+tervitus("Jaan")
+</pre>
+
+</section>
+
+<section class="box">
+
+<h2>Järjendid</h2>
+
 <p>
-Õppisin kasutama Git versioonihaldust. 
-Tegin commit’e ja salvestasin muudatusi. 
-See aitab tööd paremini hallata. 
+Järjend on andmestruktuur, kuhu saab panna mitu väärtust korraga.
+Näiteks saab hoida numbreid või nimesid.
 </p>
 
-<h3>PyCharm ja versioonihaldus</h3>
 <p>
-Õppisin kasutama PyCharm programmi. 
-Seadistasin Git-i oma projektis. 
-See teeb programmeerimise mugavamaks. 
+Järjendi kaudu saab käia kõik elemendid läbi tsükliga.
 </p>
 
-<h2>Tarkvara arendusprotsess</h2>
+<pre>
+numbrid = [1, 2, 3, 4, 5]
+
+for n in numbrid:
+    print(n)
+</pre>
+
+</section>
+
+<section class="box">
+
+<h2>Sõnastikud</h2>
+
 <p>
-Minu portfoolio sai alguse tarkvara arendusprotsessi ainest. 
-Seal õppisin, kuidas projekte planeerida ja teha. 
-See aitas mul luua oma ainemapi. 
+Sõnastik on andmestruktuur, kus andmed on võtme ja väärtuse kujul.
 </p>
-   
-    
+
+<p>
+Näiteks saab hoida inimese nime ja vanust.
+</p>
+
+<pre>
+isik = {
+    "nimi": "Karl",
+    "vanus": 18
+}
+
+print(isik["nimi"])
+print(isik["vanus"])
+</pre>
+
+</section>
+
+<section class="box">
+
+<h2>Objektorienteeritud programmeerimine</h2>
+
+<p>
+Objektorienteeritud programmeerimine (OOP) tähendab, et programm koosneb objektidest ja klassidest.
+</p>
+
+<p>
+Klass on nagu mudel ja objekt on selle tegelik näide.
+</p>
+
+<pre>
+class Auto:
+    def __init__(self, mark, aasta):
+        self.mark = mark
+        self.aasta = aasta
+
+    def kuva(self):
+        print(self.mark, self.aasta)
+
+auto1 = Auto("BMW", 2020)
+auto1.kuva()
+</pre>
+
+</section>
+
+<section class="box">
+
+<h2>Failide kasutamine</h2>
+
+<p>
+Failidega saab andmeid salvestada ja hiljem lugeda.
+See on kasulik, kui andmeid on vaja säilitada.
+</p>
+
+<pre>
+fail = open("andmed.txt", "r")
+sisu = fail.read()
+print(sisu)
+fail.close()
+</pre>
+
+</section>
+
+<section class="box">
+
+<h2>Näidisülesanne</h2>
+
+<p>
+Ülesanne: Kirjuta programm, mis küsib kasutaja nime ja vanuse ning kuvab need ekraanile.
+</p>
+
+<p>
+See ülesanne aitab õppida sisendi ja väljundi kasutamist.
+</p>
+
+<pre>
+nimi = input("Sisesta nimi: ")
+vanus = input("Sisesta vanus: ")
+
+print("Nimi:", nimi)
+print("Vanus:", vanus)
+</pre>
+
+</section>
+
+<section class="box">
+
+<h2>Kokkuvõte</h2>
+
+<p>
+Programmeerimise alustes õppisin, kuidas kirjutada lihtsaid programme Pythonis.
+Õppisin muutujad, tingimuslaused, tsüklid, funktsioonid, järjendid, sõnastikud ja OOP põhimõtted.
+</p>
+
+<p>
+Need oskused on väga olulised, sest nende abil saab teha suuremaid ja keerulisemaid programme.
+</p>
+
+</section>
+
 </body>
 </html>

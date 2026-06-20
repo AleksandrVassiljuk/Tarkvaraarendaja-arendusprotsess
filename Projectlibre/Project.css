@@ -1,89 +1,107 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
     background: #0f172a;
     color: #e2e8f0;
 }
 
-/* CONTAINER */
 .container {
-    max-width: 1000px;
-    margin: 40px auto;
-    background: #1e293b;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
 }
 
-/* PEALKIRJAD */
 h1 {
-    color: white;
     text-align: center;
+    color: white;
+    font-size: 2.2em;
     margin-bottom: 10px;
+}
+
+p {
+    text-align: center;
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+section {
+    background: #1e293b;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
 }
 
 h2 {
     color: #60a5fa;
-    margin-top: 25px;
+    margin-bottom: 12px;
     border-left: 4px solid #1a73e8;
     padding-left: 10px;
 }
 
-/* TEKST */
-p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #cbd5e1;
+h3 {
+    color: #93c5fd;
 }
 
-/* BUTTON LINKID */
-.link-btn {
-    display: inline-block;
-    background-color: #1a73e8;
-    color: white;
-    text-decoration: none;
-    padding: 10px 18px;
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+li {
     margin: 8px 0;
-    border-radius: 8px;
-    transition: 0.25s ease;
+    text-align: center;
 }
 
-.link-btn:hover {
-    background-color: #2563eb;
-    transform: translateY(-3px);
-}
-
-/* LINKS */
 a {
-    color: #60a5fa;
     text-decoration: none;
-    transition: 0.2s;
+    color: #60a5fa;
 }
 
 a:hover {
     color: white;
 }
 
-/* CARD EFFECT (kui tahad sektsioone eraldi) */
-section {
-    margin-top: 20px;
-    padding: 15px;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
     background: #0f172a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #334155;
+    text-align: left;
+}
+
+th {
+    background: #1a73e8;
+    color: white;
+}
+
+img {
+    display: block;
+    margin: 10px auto;
+    max-width: 90%;
     border-radius: 10px;
 }
 
-/* MOBILE */
-@media (max-width: 700px) {
-    .container {
-        width: 90%;
-        padding: 20px;
-    }
+.footer-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #94a3b8;
+}
 
+@media (max-width: 600px) {
     h1 {
-        font-size: 22px;
+        font-size: 1.6em;
     }
 
-    p {
-        font-size: 15px;
+    section {
+        padding: 15px;
     }
 }

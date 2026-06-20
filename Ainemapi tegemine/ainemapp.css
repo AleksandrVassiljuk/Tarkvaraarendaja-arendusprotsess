@@ -25,25 +25,34 @@ p {
     margin-bottom: 25px;
 }
 
+/* SECTIONS (MUUDETUD ILUSAMAKS) */
 section {
     background: #1e293b;
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    transition: 0.2s ease;
 }
 
+section:hover {
+    transform: translateY(-3px);
+}
+
+/* HEADINGS */
 h2 {
     color: #60a5fa;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     border-left: 4px solid #1a73e8;
     padding-left: 10px;
 }
 
+/* SUBHEADINGS */
 h3 {
     color: #93c5fd;
 }
 
+/* LIST CLEANUP */
 ul {
     list-style: none;
     padding-left: 0;
@@ -54,15 +63,26 @@ li {
     text-align: center;
 }
 
+/* LINKS (TEHTUD ILUSAMAKS NAGU BUTTONID) */
 a {
-    text-decoration: none;
+    display: block;
+    margin: 6px 0;
+    padding: 10px 14px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 10px;
     color: #60a5fa;
+    text-decoration: none;
+    transition: 0.25s ease;
 }
 
 a:hover {
+    background: #1e293b;
     color: white;
+    transform: translateX(5px);
 }
 
+/* TABLE */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -83,6 +103,7 @@ th {
     color: white;
 }
 
+/* IMAGE */
 img {
     display: block;
     margin: 10px auto;
@@ -90,12 +111,14 @@ img {
     border-radius: 10px;
 }
 
+/* FOOTER */
 .footer-link {
     text-align: center;
     margin-top: 20px;
     color: #94a3b8;
 }
 
+/* MOBILE */
 @media (max-width: 600px) {
     h1 {
         font-size: 1.6em;
